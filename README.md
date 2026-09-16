@@ -9,44 +9,44 @@
 
 ## סקירה כללית
 
-**MagdalorTech** היא מערכת `Full-Stack` לניהול מכירה סינית. המערכת מחברת בין ממשק Web ציבורי המבוסס על Angular לבין `REST API` המבוסס על ASP.NET Core.
+זהו פרויקט לניהול מכירה סינית בשם **MagdalorTech**. המערכת כוללת ממשק Web ציבורי ושרת ASP.NET Core המספק `REST API`.
 
 המערכת תומכת בהרשמה והתחברות משתמשים, קטלוג מתנות, ניהול תורמים ומתנות, סל קניות, הזמנות, הגרלות, זיהוי זוכים, אזור ניהול, העלאת תמונות ושירות AI אופציונלי.
 
-זהו פרויקט לימודי שנבנה לצורך תרגול ויישום של עקרונות פיתוח `Full-Stack`, עבודה עם `REST API`, ניהול מסד נתונים, Authentication, הרשאות ותכנון מערכת המשלבת Client ו-Server.
+זהו פרויקט לימודי שנבנה לצורך תרגול פיתוח מצד הלקוח ומצד השרת, עבודה עם `REST API`, ניהול מסד נתונים, Authentication והרשאות.
 
 הפרויקט מאורגן במבנה **Monorepo** הכולל שני יישומים עצמאיים:
 
-- צד הלקוח נמצא בתיקייה `client` וכולל אפליקציית Angular.
-- צד השרת נמצא בתיקייה `server` וכולל אפליקציית ASP.NET Core Web API.
+- אפליקציית הלקוח נמצאת בתיקייה `client` ומבוססת על Angular.
+- אפליקציית השרת נמצאת בתיקייה `server` ומבוססת על ASP.NET Core Web API.
 
 ## טכנולוגיות
 
 ### צד הלקוח
 
-- אפליקציית הלקוח מבוססת על Angular `20.3.x`, לפי `client/package.json`.
-  - גרסת `@angular/core` היא `^20.3.0`.
+- גרסת Angular של הלקוח היא `20.3.x`, בהתאם ל-`client/package.json`.
+  - גרסת הליבה `@angular/core` היא `^20.3.0`.
   - גרסת Angular CLI היא `^20.3.8`.
-- שפת הפיתוח היא `TypeScript`.
-- ניהול זרמי מידע מתבצע באמצעות `RxJS`.
-- המערכת משתמשת ב-`Angular Standalone Components`.
-- רכיבי הממשק מבוססים על `PrimeNG` ו-`PrimeIcons`.
+- שפת הפיתוח בצד הלקוח היא `TypeScript`.
+- ניהול זרמי המידע מתבצע באמצעות `RxJS`.
+- מבנה האפליקציה מבוסס על `Angular Standalone Components`.
+- רכיבי הממשק מבוססים על `PrimeNG` ועל `PrimeIcons`.
 - הגרפים מוצגים באמצעות `Chart.js`.
-- עיצוב הממשק נכתב ב-`SCSS`.
-- בדיקות הלקוח מבוססות על `Jasmine` ו-`Karma`.
+- עיצוב הממשק נכתב באמצעות `SCSS`.
+- בדיקות הלקוח מבוססות על `Jasmine` ועל `Karma`.
 
 ### צד השרת
 
-- השרת הוא `ASP.NET Core Web API` המבוסס על `.NET 8`.
+- השרת מבוסס על `ASP.NET Core Web API` ועל `.NET 8`.
 - הגישה למסד הנתונים מתבצעת באמצעות `Entity Framework Core`.
 - מסד הנתונים הוא `SQL Server`.
 - האימות מתבצע באמצעות `JWT Bearer Authentication`.
 - הרשאות התפקידים מבוססות על `Role-Based Authorization`.
-- המיפוי בין מודלים מתבצע באמצעות `AutoMapper`.
+- המיפוי בין המודלים מתבצע באמצעות `AutoMapper`.
 - רישום האירועים מתבצע באמצעות `Serilog`.
 - תיעוד ה-API מתבצע באמצעות `Swagger / OpenAPI`.
 - השרת כולל `Middleware` מותאם אישית.
-- שירות AI המבוסס על `OpenAI-compatible API`
+- שירות ה-AI מבוסס על `OpenAI-compatible API`.
 
 ### מסד נתונים ו-Assets
 
